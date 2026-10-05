@@ -1,0 +1,15 @@
+---
+interface Props {
+  locale: "id" | "en";
+  slug: string; // "" for home, "privacy", "terms", "dmca", "delete-account", "support"
+}
+
+const { locale, slug } = Astro.props;
+const idPath = slug ? `/${slug}` : "/";
+const enPath = slug ? `/en/${slug}` : "/en";
+---
+
+<nav style="display: flex; gap: 0.75rem; font-size: 0.9rem;">
+  <a href={idPath} aria-current={locale === "id" ? "page" : undefined} style={locale === "id" ? "color: var(--text-primary); font-weight: 700;" : "color: var(--text-secondary);"}>ID</a>
+  <a href={enPath} aria-current={locale === "en" ? "page" : undefined} style={locale === "en" ? "color: var(--text-primary); font-weight: 700;" : "color: var(--text-secondary);"}>EN</a>
+</nav>
