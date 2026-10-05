@@ -7,6 +7,10 @@ description: "Proses pengaduan pelanggaran hak cipta untuk DramaID."
 
 _Terakhir diperbarui: 5 Oktober 2026_
 
+<!-- ASSUMPTION: alamat dmca@dramaid.app memakai domain dramaid.app yang
+     sama seperti kontak lain di situs ini; ganti kalau domain resminya
+     berbeda. -->
+
 DramaID menghormati hak kekayaan intelektual pihak lain. **DramaID tidak
 meng-host file video** — aplikasi menampilkan metadata dari sumber publik
 dan tautan ke penyedia pihak ketiga. Jika Anda yakin konten yang ditautkan
@@ -28,11 +32,22 @@ Kirim email ke **dmca@dramaid.app** dengan informasi berikut:
 6. Pernyataan bahwa informasi dalam pengaduan akurat, dan bahwa Anda
    berwenang bertindak atas nama pemilik hak cipta.
 
+<!-- ASSUMPTION: "dalam waktu wajar" di bawah belum punya definisi/SLA
+     resmi; sesuaikan kalau tim punya target waktu respons spesifik. -->
+
 ## Yang akan kami lakukan
 
 Setelah menerima pengaduan yang lengkap, kami akan meninjau dan — jika
 sesuai — menghapus atau menonaktifkan akses ke metadata/tautan terkait
 di aplikasi kami dalam waktu wajar.
+
+<!-- ASSUMPTION: proses pengaduan balik di bawah mengikuti kerangka hukum
+     AS (17 U.S.C. §512), sementara Ketentuan Layanan menyatakan
+     yurisdiksi Indonesia dan belum ada agen DMCA terdaftar di U.S.
+     Copyright Office — pendaftaran ini diperlukan agar perlindungan
+     safe harbor berlaku. Konfirmasi dengan tim hukum apakah proses ini
+     relevan atau perlu disesuaikan ke mekanisme pengaduan hak cipta
+     versi Indonesia (UU Hak Cipta). -->
 
 ## Pengaduan balik (counter-notice)
 

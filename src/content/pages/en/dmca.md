@@ -7,6 +7,10 @@ description: "Copyright complaint process for DramaID."
 
 _Last updated: October 5, 2026_
 
+<!-- ASSUMPTION: the dmca@dramaid.app address uses the same dramaid.app
+     domain as other contacts on this site; update if the real domain
+     differs. -->
+
 DramaID respects the intellectual property rights of others. **DramaID
 does not host video files** — the app displays metadata from public
 sources and links to third-party providers. If you believe content
@@ -28,11 +32,22 @@ Email **dmca@dramaid.app** with the following information:
 6. A statement that the information in the complaint is accurate, and
    that you are authorized to act on the copyright owner's behalf.
 
+<!-- ASSUMPTION: "within a reasonable time" below has no defined SLA
+     yet; adjust if the team sets a specific response-time target. -->
+
 ## What we'll do
 
 Once we receive a complete complaint, we'll review it and — where
 appropriate — remove or disable access to the related metadata/links in
 our app within a reasonable time.
+
+<!-- ASSUMPTION: the counter-notice process below follows the US DMCA
+     framework (17 U.S.C. §512), while the Terms of Service designate
+     Indonesian jurisdiction and no DMCA agent is registered with the
+     U.S. Copyright Office — registration is required for safe-harbor
+     protection to apply. Confirm with legal counsel whether this
+     process is appropriate or should be adapted to Indonesia's own
+     copyright-complaint mechanism (UU Hak Cipta). -->
 
 ## Counter-notice
 

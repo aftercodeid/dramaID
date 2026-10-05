@@ -19,9 +19,13 @@ const { title, description, locale, slug } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} · DramaID</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:title" content={`${title} · DramaID`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:locale" content={locale === "id" ? "id_ID" : "en_US"} />
+    <meta property="og:locale:alternate" content={locale === "id" ? "en_US" : "id_ID"} />
   </head>
   <body>
     <header style="background: var(--raised); border-bottom: 1px solid var(--border); padding: 1rem 0;">
@@ -33,7 +37,7 @@ const { title, description, locale, slug } = Astro.props;
     <main class="container" style="padding: 2.5rem 1.25rem;">
       <slot />
     </main>
-    <footer style="border-top: 1px solid var(--border); color: var(--text-muted); padding: 1.5rem 0; margin-top: 2rem;">
+    <footer style="border-top: 1px solid var(--border); color: var(--text-secondary); padding: 1.5rem 0; margin-top: 2rem;">
       <div class="container">
         <p>&copy; {new Date().getFullYear()} DramaID.</p>
       </div>

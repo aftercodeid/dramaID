@@ -1,6 +1,19 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
+function stripHtmlComments() {
+  return (tree) => {
+    const strip = (node) => {
+      if (!node.children) return;
+      node.children = node.children.filter(
+        (child) => !(child.type === "html" && /^<!--[\s\S]*-->$/.test(child.value.trim())),
+      );
+      node.children.forEach(strip);
+    };
+    strip(tree);
+  };
+}
+
 export default defineConfig({
   site: "https://dramaid.app",
   integrations: [
@@ -17,5 +30,8 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false,
     },
+  },
+  markdown: {
+    remarkPlugins: [stripHtmlComments],
   },
 });

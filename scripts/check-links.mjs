@@ -32,7 +32,7 @@ const broken = [];
 
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
-  const hrefMatches = html.matchAll(/href="([^"]+)"/g);
+  const hrefMatches = html.matchAll(/<a\s[^>]*href="([^"]+)"/g);
   for (const [, href] of hrefMatches) {
     if (!href.startsWith("/")) continue; // external/mailto/anchor
     const candidates = existsAsRoute(href);
