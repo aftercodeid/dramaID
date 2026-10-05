@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getEntry, render } from "astro:content";
+
+const entry = await getEntry("pages", "id/dmca");
+const { Content } = await render(entry!);
+---
+
+<Layout title={entry!.data.title} description={entry!.data.description} locale="id" slug="dmca">
+  <Content />
+</Layout>
