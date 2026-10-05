@@ -1,0 +1,50 @@
+:root {
+  --accent-50: #FFF0F2;
+  --accent-100: #FFDCE1;
+  --accent-200: #FFB8C3;
+  --accent-300: #FA91A2;
+  --accent-400: #F06A80;
+  --accent-500: #E24E67;
+  --accent-600: #D63650;
+  --accent-700: #B82B44;
+  --accent-800: #8F2236;
+  --accent-900: #641929;
+  --accent-950: #3D0F19;
+
+  --bg: #0A0B0F;
+  --surface: #14161D;
+  --raised: #1C1F28;
+  --overlay: #262A35;
+  --border: #2A2E38;
+
+  --text-primary: #F4F5F7;
+  --text-secondary: #A2A6B0;
+  --text-muted: #656974;
+
+  --error: #FF7A45;
+  --success: #3CCB7F;
+  --warning: #F2B33D;
+  --info: #6FA8FF;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent-400); }
+a:hover { color: var(--accent-300); }
+
+h1, h2, h3 { line-height: 1.25; }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}

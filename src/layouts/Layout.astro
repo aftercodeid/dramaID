@@ -1,0 +1,40 @@
+---
+import "../styles/tokens.css";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "id" | "en";
+}
+
+const { title, description, locale } = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} · DramaID</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${title} · DramaID`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header style="background: var(--raised); border-bottom: 1px solid var(--border); padding: 1rem 0;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href={locale === "id" ? "/" : "/en"} style="color: var(--text-primary); font-weight: 700; text-decoration: none; font-size: 1.1rem;">DramaID</a>
+        <slot name="lang-switch" />
+      </div>
+    </header>
+    <main class="container" style="padding: 2.5rem 1.25rem;">
+      <slot />
+    </main>
+    <footer style="border-top: 1px solid var(--border); color: var(--text-muted); padding: 1.5rem 0; margin-top: 2rem;">
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()} DramaID.</p>
+      </div>
+    </footer>
+  </body>
+</html>
