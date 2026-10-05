@@ -1561,5 +1561,16 @@ field name.
 5. **Legal review** of the drafted Privacy Policy, Terms of Service, and
    DMCA Policy content before relying on them for an actual app-store
    submission — this plan drafts reasonable starting text, not reviewed
-   legal advice (see every `<!-- ASSUMPTION -->` comment for what to
-   check first).
+   legal advice. The full, current checklist of every drafting assumption
+   (including three added to the DMCA policy by the final-review fix
+   wave) lives at `docs/content-assumptions.md`, which mirrors what used
+   to be inline `<!-- ASSUMPTION -->` comments before those were stripped
+   from the built HTML (see the final review's Important #1 finding).
+6. **Manual visual review of all 12 content pages (6 topics × 2
+   languages) against the Miru token set** — per the spec's own Testing
+   section, this was never executed as part of any task (it needs a
+   human looking at rendered pages, not something a task's `npm run
+   build` check can stand in for). Run `npm run preview` and look at
+   every page in both languages before the site goes live; this is the
+   step most likely to catch a rendering issue like the footer-contrast
+   finding the final review caught by reading CSS, not by looking.
