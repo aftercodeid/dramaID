@@ -26,7 +26,7 @@ dihapus dari sistem kami.
 Jika Anda tidak bisa masuk ke aplikasi (misalnya lupa cara masuk, atau
 sudah uninstall), kirim email permintaan penghapusan akun ke:
 
-**privacy@dramaid.app**
+**aftercodeid@gmail.com**
 
 Sertakan alamat email yang terdaftar di akun Anda. Kami akan memproses
 permintaan dalam waktu wajar setelah memverifikasi kepemilikan akun.

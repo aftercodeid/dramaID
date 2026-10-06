@@ -1,11 +1,10 @@
 ---
 title: "Terms of Service"
 description: "Terms for using the DramaID app."
+updated: "October 5, 2026"
 ---
 
 # Terms of Service
-
-_Last updated: October 5, 2026_
 
 By using the DramaID app (the "Service"), you agree to the following
 terms.
@@ -65,4 +64,4 @@ These terms are governed by the laws of the Republic of Indonesia.
 
 ## Contact
 
-**support@dramaid.app**
+**aftercodeid@gmail.com**

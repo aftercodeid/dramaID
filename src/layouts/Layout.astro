@@ -1,5 +1,11 @@
 ---
+import "@fontsource-variable/dm-sans";
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/montserrat/wght-italic.css";
+import "@fontsource-variable/lora";
+import "@fontsource-variable/lora/wght-italic.css";
 import "../styles/tokens.css";
+import "../styles/global.css";
 import LangSwitch from "../components/LangSwitch.astro";
 
 interface Props {
@@ -10,6 +16,38 @@ interface Props {
 }
 
 const { title, description, locale, slug } = Astro.props;
+
+const nav =
+  locale === "id"
+    ? [
+        { href: "/", label: "Beranda", slug: "" },
+        { href: "/privacy", label: "Privasi", slug: "privacy" },
+        { href: "/terms", label: "Ketentuan", slug: "terms" },
+        { href: "/dmca", label: "DMCA", slug: "dmca" },
+        { href: "/delete-account", label: "Hapus Akun", slug: "delete-account" },
+        { href: "/support", label: "Bantuan", slug: "support" },
+      ]
+    : [
+        { href: "/en", label: "Home", slug: "" },
+        { href: "/en/privacy", label: "Privacy", slug: "privacy" },
+        { href: "/en/terms", label: "Terms", slug: "terms" },
+        { href: "/en/dmca", label: "DMCA", slug: "dmca" },
+        { href: "/en/delete-account", label: "Delete Account", slug: "delete-account" },
+        { href: "/en/support", label: "Support", slug: "support" },
+      ];
+
+const footerCopy =
+  locale === "id"
+    ? {
+        brand: "Situs pendukung resmi aplikasi DramaID, memuat kebijakan dan informasi yang dibutuhkan untuk publikasi di Google Play dan App Store.",
+        legalHeading: "Legal",
+        copyright: `© ${new Date().getFullYear()} DramaID. Hak cipta dilindungi.`,
+      }
+    : {
+        brand: "The official support site for the DramaID app, carrying the policies and information required to publish on Google Play and the App Store.",
+        legalHeading: "Legal",
+        copyright: `© ${new Date().getFullYear()} DramaID. All rights reserved.`,
+      };
 ---
 
 <!doctype html>
@@ -28,18 +66,57 @@ const { title, description, locale, slug } = Astro.props;
     <meta property="og:locale:alternate" content={locale === "id" ? "en_US" : "id_ID"} />
   </head>
   <body>
-    <header style="background: var(--raised); border-bottom: 1px solid var(--border); padding: 1rem 0;">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href={locale === "id" ? "/" : "/en"} style="color: var(--text-primary); font-weight: 700; text-decoration: none; font-size: 1.1rem;">DramaID</a>
-        <LangSwitch locale={locale} slug={slug} />
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href={locale === "id" ? "/" : "/en"} class="logo">
+          Drama<span class="logo__accent">ID</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={slug === item.slug ? "page" : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <div class="header-right">
+          <LangSwitch locale={locale} slug={slug} />
+          <details class="nav-toggle">
+            <summary class="nav-toggle__btn" aria-label={locale === "id" ? "Buka menu" : "Open menu"}>
+              <span></span><span></span><span></span>
+            </summary>
+            <nav class="nav-mobile" aria-label="Main">
+              {nav.map((item) => (
+                <a href={item.href} aria-current={slug === item.slug ? "page" : undefined}>
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </details>
+        </div>
       </div>
     </header>
     <main class="container" style="padding: 2.5rem 1.25rem;">
       <slot />
     </main>
-    <footer style="border-top: 1px solid var(--border); color: var(--text-secondary); padding: 1.5rem 0; margin-top: 2rem;">
+    <footer class="site-footer">
       <div class="container">
-        <p>&copy; {new Date().getFullYear()} DramaID.</p>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href={locale === "id" ? "/" : "/en"} class="logo">
+              Drama<span class="logo__accent">ID</span>
+            </a>
+            <p>{footerCopy.brand}</p>
+          </div>
+          <div>
+            <p class="footer__heading">{footerCopy.legalHeading}</p>
+            <ul class="footer__links">
+              {nav.slice(1).map((item) => (
+                <li><a href={item.href}>{item.label}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">{footerCopy.copyright}</div>
       </div>
     </footer>
   </body>

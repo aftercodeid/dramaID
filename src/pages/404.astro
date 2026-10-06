@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="404" description="Halaman tidak ditemukan." locale="id" slug="">
-  <h1>404</h1>
-  <p>Halaman tidak ditemukan. <a href="/">Kembali ke beranda</a>.</p>
+  <div class="error-page">
+    <p class="error-code">404</p>
+    <p>Halaman tidak ditemukan.</p>
+    <a href="/" class="btn btn-ghost">Kembali ke beranda</a>
+  </div>
 </Layout>

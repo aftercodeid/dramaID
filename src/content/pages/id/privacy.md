@@ -1,15 +1,10 @@
 ---
 title: "Kebijakan Privasi"
 description: "Bagaimana DramaID mengumpulkan dan menggunakan data Anda."
+updated: "5 Oktober 2026"
 ---
 
 # Kebijakan Privasi
-
-_Terakhir diperbarui: 5 Oktober 2026_
-
-<!-- ASSUMPTION: alamat kontak privasi di bawah pakai domain dramaid.app,
-     sesuai default yang sudah dipakai backend (legal.privacyUrl dkk di
-     GET /app/config). Ganti kalau domain resminya berbeda. -->
 
 Kebijakan ini menjelaskan data apa yang dikumpulkan DramaID ("kami"),
 untuk apa data itu digunakan, dan hak Anda atasnya.
@@ -61,4 +56,4 @@ lewat menu Pengaturan di aplikasi, atau lewat halaman
 
 ## Kontak
 
-Pertanyaan soal privasi: **privacy@dramaid.app**
+Pertanyaan soal privasi: **aftercodeid@gmail.com**

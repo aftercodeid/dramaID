@@ -1,0 +1,52 @@
+---
+import Layout from "./Layout.astro";
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  locale: "id" | "en";
+  slug: string;
+  updated?: string;
+  headings: Heading[];
+}
+
+const { title, description, locale, slug, updated, headings } = Astro.props;
+const toc = headings.filter((h) => h.depth === 2);
+const updatedLabel = locale === "id" ? "Diperbarui" : "Updated";
+const tocLabel = locale === "id" ? "Daftar Isi" : "Table of Contents";
+---
+
+<Layout title={title} description={description} locale={locale} slug={slug}>
+  <div class="doc-layout">
+    <div class="doc-content prose">
+      {updated && <p class="doc-meta">{updatedLabel}: {updated}</p>}
+      {toc.length > 0 && (
+        <details class="doc-toc-mobile">
+          <summary>{tocLabel}</summary>
+          <ol>
+            {toc.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ol>
+        </details>
+      )}
+      <slot />
+    </div>
+    {toc.length > 0 && (
+      <aside class="doc-toc">
+        <p class="doc-toc__title">{tocLabel}</p>
+        <ol>
+          {toc.map((h) => (
+            <li><a href={`#${h.slug}`}>{h.text}</a></li>
+          ))}
+        </ol>
+      </aside>
+    )}
+  </div>
+</Layout>

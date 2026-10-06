@@ -1,11 +1,10 @@
 ---
 title: "Ketentuan Layanan"
 description: "Syarat penggunaan aplikasi DramaID."
+updated: "5 Oktober 2026"
 ---
 
 # Ketentuan Layanan
-
-_Terakhir diperbarui: 5 Oktober 2026_
 
 Dengan menggunakan aplikasi DramaID ("Layanan"), Anda setuju dengan
 ketentuan berikut.
@@ -66,4 +65,4 @@ Ketentuan ini tunduk pada hukum Republik Indonesia.
 
 ## Kontak
 
-**support@dramaid.app**
+**aftercodeid@gmail.com**

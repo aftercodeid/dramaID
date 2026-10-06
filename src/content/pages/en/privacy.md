@@ -1,15 +1,10 @@
 ---
 title: "Privacy Policy"
 description: "How DramaID collects and uses your data."
+updated: "October 5, 2026"
 ---
 
 # Privacy Policy
-
-_Last updated: October 5, 2026_
-
-<!-- ASSUMPTION: the contact address below uses the dramaid.app domain,
-     matching the default already used by the backend (legal.privacyUrl
-     etc. in GET /app/config). Update if the real domain differs. -->
 
 This policy explains what data DramaID ("we") collects, what it's used
 for, and your rights over it.
@@ -60,4 +55,4 @@ page if you can't access the app.
 
 ## Contact
 
-Privacy questions: **privacy@dramaid.app**
+Privacy questions: **aftercodeid@gmail.com**

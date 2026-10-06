@@ -15,8 +15,7 @@ an actual app-store submission.
 ## Privacy Policy
 
 - `src/content/pages/id/privacy.md`, `src/content/pages/en/privacy.md`:
-  1. Contact address uses the `dramaid.app` domain placeholder (matches backend's `legal.privacyUrl` default in `GET /app/config`); update once the real domain is chosen.
-  2. States no confirmed third-party ad/analytics SDK is in the app; correct if one is actually in use.
+  1. States no confirmed third-party ad/analytics SDK is in the app; correct if one is actually in use.
 
 ## Terms of Service
 
@@ -28,9 +27,8 @@ an actual app-store submission.
 ## DMCA Policy
 
 - `src/content/pages/id/dmca.md`, `src/content/pages/en/dmca.md`:
-  1. Contact address (`dmca@dramaid.app`) uses the same domain placeholder as other contacts; update if the real domain differs.
-  2. The counter-notice/complaint process follows the US DMCA framework (17 U.S.C. §512), while the Terms designate Indonesian jurisdiction and no DMCA agent is registered with the U.S. Copyright Office (required for safe-harbor protection). Confirm with legal counsel whether this process is appropriate or should be adapted to Indonesia's own copyright mechanism (UU Hak Cipta).
-  3. "Within a reasonable time" has no defined SLA; adjust if the team sets a specific target.
+  1. The counter-notice/complaint process follows the US DMCA framework (17 U.S.C. §512), while the Terms designate Indonesian jurisdiction and no DMCA agent is registered with the U.S. Copyright Office (required for safe-harbor protection). Confirm with legal counsel whether this process is appropriate or should be adapted to Indonesia's own copyright mechanism (UU Hak Cipta).
+  2. "Within a reasonable time" has no defined SLA; adjust if the team sets a specific target.
 
 ## Delete Account
 

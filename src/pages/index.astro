@@ -1,11 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getEntry, render } from "astro:content";
+import { getEntry } from "astro:content";
 
 const entry = await getEntry("pages", "id/home");
-const { Content } = await render(entry!);
+const { hero, features, pillars, contact } = entry!.data;
 ---
 
 <Layout title={entry!.data.title} description={entry!.data.description} locale="id" slug="">
-  <Content />
+  <section class="hero">
+    <p class="hero__eyebrow">{hero!.eyebrow}</p>
+    <h1 class="hero__title">{hero!.title}</h1>
+    <p class="hero__tagline">{hero!.tagline}</p>
+    <div class="hero__actions">
+      <a href="/support" class="btn btn-primary">Hubungi Kami</a>
+      <a href="/privacy" class="btn btn-ghost">Lihat Kebijakan Privasi</a>
+    </div>
+    {hero!.note && <p class="hero__note">{hero!.note}</p>}
+  </section>
+
+  <nav class="feature-list" aria-label="Kebijakan dan bantuan">
+    {features!.map((f, i) => (
+      <a href={f.href} class="feature-list__item">
+        <span class="feature-list__index" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+        <span class="feature-list__body">
+          <span class="feature-list__title">{f.title}</span>
+          <p class="feature-list__desc">{f.description}</p>
+        </span>
+        <span class="feature-list__arrow" aria-hidden="true">→</span>
+      </a>
+    ))}
+  </nav>
+
+  {pillars && (
+    <section class="pillars">
+      <p class="section-eyebrow">{pillars.eyebrow}</p>
+      <h2 class="section-title">{pillars.title}</h2>
+      <div class="pillar-grid">
+        {pillars.items.map((item, i) => (
+          <div class="pillar">
+            <span class="pillar__index" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+            <h3 class="pillar__title">{item.title}</h3>
+            <p class="pillar__desc">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {contact && (
+    <section class="contact-band">
+      <p class="section-eyebrow">{contact.eyebrow}</p>
+      <h2 class="section-title">{contact.title}</h2>
+      <div class="contact-band__grid">
+        <div>
+          <p class="contact-band__label">{contact.general.label}</p>
+          <a href={`mailto:${contact.general.email}`} class="contact-band__email">{contact.general.email}</a>
+        </div>
+        <div>
+          <p class="contact-band__label">{contact.copyright.label}</p>
+          <a href={`mailto:${contact.copyright.email}`} class="contact-band__email">{contact.copyright.email}</a>
+        </div>
+      </div>
+    </section>
+  )}
 </Layout>

@@ -1,15 +1,10 @@
 ---
 title: "Kebijakan DMCA"
 description: "Proses pengaduan pelanggaran hak cipta untuk DramaID."
+updated: "5 Oktober 2026"
 ---
 
 # Kebijakan DMCA
-
-_Terakhir diperbarui: 5 Oktober 2026_
-
-<!-- ASSUMPTION: alamat dmca@dramaid.app memakai domain dramaid.app yang
-     sama seperti kontak lain di situs ini; ganti kalau domain resminya
-     berbeda. -->
 
 DramaID menghormati hak kekayaan intelektual pihak lain. **DramaID tidak
 meng-host file video** — aplikasi menampilkan metadata dari sumber publik
@@ -19,7 +14,7 @@ kepada kami.
 
 ## Cara mengirim pengaduan
 
-Kirim email ke **dmca@dramaid.app** dengan informasi berikut:
+Kirim email ke **aftercodeid@gmail.com** dengan informasi berikut:
 
 1. Tanda tangan (fisik atau elektronik) pemilik hak cipta atau orang yang
    berwenang mewakilinya.
@@ -63,4 +58,4 @@ kali menjadi subjek pengaduan hak cipta yang sah.
 
 ## Kontak
 
-**dmca@dramaid.app**
+**aftercodeid@gmail.com**

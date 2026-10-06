@@ -1,15 +1,10 @@
 ---
 title: "DMCA Policy"
 description: "Copyright complaint process for DramaID."
+updated: "October 5, 2026"
 ---
 
 # DMCA Policy
-
-_Last updated: October 5, 2026_
-
-<!-- ASSUMPTION: the dmca@dramaid.app address uses the same dramaid.app
-     domain as other contacts on this site; update if the real domain
-     differs. -->
 
 DramaID respects the intellectual property rights of others. **DramaID
 does not host video files** — the app displays metadata from public
@@ -19,7 +14,7 @@ to us.
 
 ## How to submit a complaint
 
-Email **dmca@dramaid.app** with the following information:
+Email **aftercodeid@gmail.com** with the following information:
 
 1. A physical or electronic signature of the copyright owner or a person
    authorized to act on their behalf.
@@ -63,4 +58,4 @@ subject of valid copyright complaints.
 
 ## Contact
 
-**dmca@dramaid.app**
+**aftercodeid@gmail.com**

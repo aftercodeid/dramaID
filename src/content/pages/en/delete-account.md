@@ -26,7 +26,7 @@ will be removed from our systems.
 If you can't sign into the app (forgot how you signed in, already
 uninstalled it, etc.), email an account-deletion request to:
 
-**privacy@dramaid.app**
+**aftercodeid@gmail.com**
 
 Include the email address on your account. We'll process the request
 within a reasonable time after verifying account ownership.
